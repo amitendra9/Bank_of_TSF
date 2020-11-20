@@ -1,1 +1,16 @@
+header{
+	padding:20px;
+	text-align:center;
+}
+
+a{
+	color:#ffffff;
+}
+a:hover{
+	color:#ffccff;
+}
+footer{
+	text-align:center;
+}
+
 
