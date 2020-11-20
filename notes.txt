@@ -1,0 +1,36 @@
+#############  Basic Bank System   ############
+To get started run the following SQL commands:
+
+CREATE DATABASE bankdata;
+
+CREATE TABLE customers (
+   customer_id INTEGER NOT NULL AUTO_INCREMENT KEY,
+   name VARCHAR(128),
+   email VARCHAR(128),
+   gender VARCHAR(128),
+   dob VARCHAR(128),
+   currentBalance DECIMAL(12,2)
+) ENGINE=InnoDB CHARSET=utf8;
+
+ALTER TABLE customers
+	ADD address LONGTEXT;
+
+
+CREATE TABLE transfers (
+   transaction_id INTEGER NOT NULL AUTO_INCREMENT KEY,
+   sender VARCHAR(128),
+   reciever VARCHAR(128),
+   amt DECIMAL(12,2)
+) ENGINE=InnoDB CHARSET=utf8;
+
+INSERT INTO transfer ('sender', 'reciever', 'amt') 
+VALUES ([value-2],[value-3],[value-4])
+
+
+UPDATE customers
+SET currentBalance=currentBalance + amt
+WHERE customer_id = reciever
+
+UPDATE customers
+SET currentBalance=currentBalance - amt
+WHERE customer_id = sender 
